@@ -38,6 +38,7 @@ React Context (`WeatherContext`) хранит глобальное состоя�
 ### API
 **Open-Meteo** (бесплатно, без регистрации, без API-ключа).
 - Геолокация: `expo-location` для GPS-координат
+- Геокодинг (город → координаты): `https://geocoding-api.open-meteo.com/v1/search` — используется при ручном вводе города
 - Запрос текущей погоды: `https://api.open-meteo.com/v1/forecast`
 - Запрос прогноза: тот же endpoint с параметром `daily`
 
@@ -53,7 +54,8 @@ WeatherApp/
 │   ├── WeatherIcon.js
 │   └── WeatherCard.js
 ├── services/
-│   └── weatherApi.js
+│   ├── weatherApi.js
+│   └── geocodingApi.js
 ├── context/
 │   └── WeatherContext.js
 └── assets/
